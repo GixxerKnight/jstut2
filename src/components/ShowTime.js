@@ -3,12 +3,16 @@ import ReactDOM from "react-dom"
 
 function ShowTime(){
     const date = new Date()
-    let i = 4
+    const hour = date.getHours()
+    const minute = date.getMinutes()
+    const sec = date.getSeconds()
+
+    
     
     //const time = new Date().toLocale
     
 return(
-    <h1>The date and time is {date.toDateString()} </h1>
+    <h>The date and time is {date.toDateString()} Hour {hour} Minute {minute} Seconds {sec}</h>
     )
 }
 
