@@ -5,7 +5,8 @@ import MyCheckList from"./components/MyCheckList"
 import DumpsterFire from './components/DumpsterFire';
 import ShowTime from "./components/ShowTime"
 import ToDoItem from "./components/ToDoItem"
-
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function MyOrderedList(){
   return(
@@ -51,14 +52,16 @@ function PassJava(){
 
 ReactDOM.render(
 
-<div>
+<Provider store={store}>
+  <React.StrictMode>
 <ShowTime />
 <MyInfo />
 <MyOrderedList /> 
 <PassJava />
 <MyCheckList />
 <DumpsterFire />
-</div>,
+</React.StrictMode>
+</Provider>,
  document.getElementById('root'))
 
 
